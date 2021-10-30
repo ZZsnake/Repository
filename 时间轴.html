@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时间轴</title>
+    <style>
+        img{height: auto; width: auto\9; width:100%;}
+        #timeline{
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                left:30px;
+                top: 180px;
+                
+            }
+            #textout{
+                width:35px;
+                float: left;
+                height: 100%;
+                margin-left: 20px;
+                padding-top:10px;
+                cursor:pointer;
+            }
+            #lineout{
+                width:4px;
+                height: 100%;
+                float: left;
+                margin-left: 5px;
+            
+            }
+            .line{
+                width: 4px;
+                height: 50px;
+                background: #ccc; 
+                
+            }
+            .text{
+                width: 35px;
+                height: 50px;
+            }
+            #picture{
+                width: 1000px;
+                height: 500px;
+                margin-top: 50px;
+                margin-left:auto ;
+                margin-right:auto;
+                
+            }
+    </style>
+    <script type="text/javascript">
+        function movecolor(num){
+            document.getElementById("l"+num).style.background = "#98E0FA" ;
+            document.getElementById("backgroundimg").src="images/pic"+num+".jpg";
+        }
+        function outcolor(num){
+            document.getElementById("l"+num).style.background = "#ccc" ;
+        }
+</script>
+</head>
+<body>
+    
+
+<div id="timeline">
+    <div id="textout">
+        <div class="text" onmousemove="movecolor(1)" onmouseout="outcolor(1)">“1900”</div>
+        <div class="text" onmousemove="movecolor(2)" onmouseout="outcolor(2)">痛别丹尼</div>
+        <div class="text" onmousemove="movecolor(3)" onmouseout="outcolor(3)">迷上钢琴</div>
+        <div class="text" onmousemove="movecolor(4)" onmouseout="outcolor(4)">激情斗琴</div>
+        <div class="text" onmousemove="movecolor(5)" onmouseout="outcolor(5)">心动时刻</div>
+        <div class="text" onmousemove="movecolor(6)" onmouseout="outcolor(6)">接近陆地</div>
+        <div class="text" onmousemove="movecolor(7)" onmouseout="outcolor(7)">与船共亡</div>
+    </div>
+    <div id="lineout">
+        <div class="line" id="l1" onmousemove="movecolor(1)" onmouseout="outcolor(1)"></div>
+        <div class="line" id="l2" onmousemove="movecolor(2)" onmouseout="outcolor(2)"></div>
+        <div class="line" id="l3" onmousemove="movecolor(3)" onmouseout="outcolor(3)"></div>
+        <div class="line" id="l4" onmousemove="movecolor(4)" onmouseout="outcolor(4)"></div>
+        <div class="line" id="l5" onmousemove="movecolor(5)" onmouseout="outcolor(5)"></div>
+        <div class="line" id="l6" onmousemove="movecolor(6)" onmouseout="outcolor(6)"></div>
+        <div class="line" id="l7" onmousemove="movecolor(7)" onmouseout="outcolor(7)"></div>
+    </div>
+</div>
+<div id="picture"><img id="backgroundimg" src="images/pic1.jpg" sizes="200% 100%"></div>
+
+
+    
+</body>
+</html>
